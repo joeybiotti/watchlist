@@ -2,6 +2,14 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+
+//Optimize Images
+gulp.task('imagemin', function(){
+    gulp.src('img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('images'))
+});
 
 //Compile Sass
 gulp.task('sass', function(){
@@ -19,9 +27,11 @@ gulp.task('scripts', function(){
 });
 
 // Gulp Default
-gulp.task('default', ['sass', 'scripts']);
+gulp.task('default', ['sass', 'scripts', 'imagemin']);
 
 //Gulp Watch
 gulp.task('watch', function(){
-    gulp.watch('sass/*.scss', ['sass', 'scripts']);
+    gulp.watch('sass/*.scss', ['sass']);
+    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('img/*', ['imagemin']);
 });
