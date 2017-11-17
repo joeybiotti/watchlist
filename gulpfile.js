@@ -8,9 +8,9 @@ gulp.task('sass', function(){
     gulp.src('sass/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('css/'))
-}); 
+});
 
-// Concat + Minify JavaScript 
+// Concat + Minify JavaScript
 gulp.task('scripts', function(){
     gulp.src('js/*.js')
         .pipe(concat('main.js'))
@@ -18,7 +18,7 @@ gulp.task('scripts', function(){
         .pipe(gulp.dest('./js/'))
 });
 
-// Gulp Default 
+// Gulp Default
 gulp.task('default', ['sass', 'scripts']);
 
 //Gulp Watch
