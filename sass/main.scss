@@ -1,5 +1,23 @@
+// Colors
 $bgColor: #ccc;
+$navColor: #F8F8F8;
 
 body{
     background-color: $bgColor;
+}
+
+h1{
+    text-align: center;
+}
+
+#searchField{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+footer{
+    text-align: center;
+    margin: 35px 25px;
+    background-color: $navColor;
 }
