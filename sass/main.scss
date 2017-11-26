@@ -1,6 +1,8 @@
 // Colors
-$bgColor: #ccc;
-$navColor: #F8F8F8;
+$bgColor: #263238;
+$navColor: #37474f;
+$white: #eceff1;
+$black: #212121;
 
 body{
     background-color: $bgColor;
@@ -14,10 +16,14 @@ h1{
     display: block;
     margin: auto;
     width: 50%;
+    padding-bottom: 35px;
+}
+
+#jumbo{
+  background: $navColor;
 }
 
 footer{
-    text-align: center;
-    margin: 35px 25px;
-    background-color: $navColor;
+  background-color: $navColor;
+  text-align: center;
 }
