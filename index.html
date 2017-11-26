@@ -14,39 +14,11 @@
   <div ng-app="WatchListApp">
     <div ng-include="partials/navbar.html"></div>
 
+    <!--APP WILL LOAD HERE-->
+
     <div ng-view></div>
   </div>
-  <div class="container">
-    <div class="jumbotron" id="jumbo">
-      <h1>WatchList</h1>
-      <hr />
-      <p>I think an image will go here.</p>
-      <form id="searchField">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search">
-          <div class="input-group-btn">
-            <button id="searchBtn" class="btn btn-default btn-primary" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <p>This is some text.</p>
-    <p>This is another text.</p>
-  </div>
 
-  <div class="listArea">
-    <ul id="sortable">
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
-    </ul>
-  </div>
 
   <footer>WatchList, &copy;2017</footer>
 </body>
@@ -57,9 +29,10 @@
 <!--JQUERY-UI-->
 <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
-<!--ANGULAR/ ANGULAR-ROUTE-->
+<!--ANGULAR/ ANGULAR-ROUTE/ BOOTSTRAP-UI -->
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
 <!--MAIN.JS-->
 <script type="text/javascript" src="js/main.js"></script>
@@ -67,4 +40,5 @@
 <!--CONTROLLERS-->
 <script type="text/javascript" src="/js/controllers/mainCtrl.js"></script>
 <script type="text/javascript" src="/js/controllers/navCtrl.js"></script>
+<script type="text/javascript" src="/js/controllers/homeCtrl.js"></script>
 </html>
