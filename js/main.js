@@ -2,7 +2,7 @@
 
 console.log("main.js loaded");
 
-const app = angular.module('WatchListApp', ['ngRoute', 'ui.bootstrap']);
+const app = angular.module('WatchListApp', ['ngRoute', 'ngResource','ui.bootstrap']);
 
 app.config(($routeProvide) =>{
     $routeProvider
