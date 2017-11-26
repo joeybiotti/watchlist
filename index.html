@@ -11,18 +11,11 @@
 </head>
 
 <body>
+  <div ng-app="WatchListApp">
+    <div ng-include="partials/navbar.html"></div>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">WatchList</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-      </ul>
-    </div>
-  </nav>
-
+    <div ng-view></div>
+  </div>
   <div class="container">
     <div class="jumbotron" id="jumbo">
       <h1>WatchList</h1>
@@ -64,7 +57,14 @@
 <!--JQUERY-UI-->
 <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
+<!--ANGULAR/ ANGULAR-ROUTE-->
+<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+
 <!--MAIN.JS-->
 <script type="text/javascript" src="js/main.js"></script>
 
+<!--CONTROLLERS-->
+<script type="text/javascript" src="/js/controllers/mainCtrl.js"></script>
+<script type="text/javascript" src="/js/controllers/navCtrl.js"></script>
 </html>
