@@ -11,3 +11,7 @@ app.config(($routeProvider) => {
         controller: 'HomeCtrl'
     })
 });
+
+app.run(($location) =>{
+// auth sign in will go here.
+});
