@@ -5,15 +5,16 @@
   <title>New Project</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="lib/bower_components/normalize-css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-  <div ng-app="WatchListApp">
-    <div ng-include="partials/navbar.html"></div>
-
+  <div ng-app="">
+    <p>Enter some stuff <input type="text" ng-model="stuff" placeholder="here!"></p>
+    <hr/>
+    <p>You wrote {{stuff}}</p>
     <!--APP WILL LOAD HERE-->
 
     <div ng-view></div>
@@ -24,21 +25,17 @@
 </body>
 
 <!--JQUERY-->
-<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
 
 <!--JQUERY-UI-->
-<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
 <!--ANGULAR/ ANGULAR-ROUTE/ BOOTSTRAP-UI -->
-<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
-<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
-<!--MAIN.JS-->
-<script type="text/javascript" src="js/main.js"></script>
+<!--APP.JS-->
+<script type="text/javascript" src="app/app.js"></script>
 
-<!--CONTROLLERS-->
-<script type="text/javascript" src="/js/controllers/mainCtrl.js"></script>
-<script type="text/javascript" src="/js/controllers/navCtrl.js"></script>
-<script type="text/javascript" src="/js/controllers/homeCtrl.js"></script>
 </html>
