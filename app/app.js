@@ -4,6 +4,20 @@ console.log("app.js loaded");
 
 const app = angular.module('WatchListApp', ['ngRoute']);
 
+let isAuth = (AuthFactory) =>
+    new Promise(function(resolve, reject){
+        AuthFactory.isAuthenticated()
+        .then((userExists) =>{
+            if(userExists){
+                console.log("user exists");
+                resolve();
+            }else{
+                console.log("user does not exist");
+                reject();
+            }
+        });
+    });
+
 app.config(($routeProvider) => {
     $routeProvider
     .when('/home', {
@@ -12,6 +26,13 @@ app.config(($routeProvider) => {
     })
 });
 
-app.run(($location) =>{
-// auth sign in will go here.
+app.run(($location, FBCreds) =>{
+    let FBauthConfig = {
+        apiKey: FBCreds.apiKey,
+        authDomain: FBCreds.authDomain,
+        databaseURL: FBCreds.databaseURL
+    };
+
+    firebase.initializeApp(FBauthConfig);
+
 });
