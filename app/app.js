@@ -28,7 +28,7 @@ app.config(($routeProvider) => {
 
 app.run(($location, FBCreds) =>{
     let FBauthConfig = {
-        apiKey: FBCred.apiKey,
+        apiKey: FBCreds.apiKey,
         authDomain: FBCreds.authDomain,
         databaseURL: FBCreds.databaseURL
     };
