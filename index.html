@@ -13,8 +13,11 @@
 
     <div ng-include="'partials/navbar.html'"></div>
 
-    <div ng-view></div>
+    <div id="searchField">
+      <input type="text" placeholder="Search Movies.."><button type="button" class="btn btn-info">Search</button>
+    </div>
 
+    <div ng-view></div>
     <!--APP LOADS HERE-->
 
   <footer>WatchList, &copy;2017</footer>
