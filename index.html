@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>New Project</title>
   <meta charset="UTF-8">
@@ -14,14 +13,12 @@
 
     <div ng-include="'partials/navbar.html'"></div>
 
+    <div id="searchField">
+      <input type="text" placeholder="Search Movies.."><button type="button" class="btn btn-info">Search</button>
+    </div>
+
     <div ng-view></div>
-
-    <!--APP WILL LOAD HERE-->
-
-    <!--TESTED TO MAKE SURE ANGULAR WAS RUNNING, WILL REMOVE-->
-    <p>Enter some stuff <input type="text" ng-model="stuff" placeholder="here!"></p>
-    <hr/>
-    <p>You wrote {{stuff}}</p>
+    <!--APP LOADS HERE-->
 
   <footer>WatchList, &copy;2017</footer>
 </body>
@@ -48,10 +45,12 @@
 <script type="text/javascript" src="app/factories/dataFactory.js"></script>
 
 <!--CONTROLLERS-->
-<script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
-<script type="text/javascript" src="app/controllers/HomeCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/mainCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/navCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/homeCtrl.js"></script>
 
 <!--CREDS-->
 <script type="text/javascript" src="app/values/fb-creds.js"></script>
+<script type="text/javascript" src="app/values/mdb-creds.js"></script>
 
 </html>

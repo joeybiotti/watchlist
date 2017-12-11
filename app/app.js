@@ -26,7 +26,11 @@ app.config(($routeProvider) => {
     })
 });
 
-app.run(($location, FBCreds) =>{
+app.run(($location, FBCreds, MDBCreds) =>{
+    let MBDauthConfig = {
+        apiKey: MDBCreds.apiKey,
+    };
+
     let FBauthConfig = {
         apiKey: FBCreds.apiKey,
         authDomain: FBCreds.authDomain,
