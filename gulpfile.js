@@ -11,11 +11,11 @@ gulp.task('imagemin', function(){
 });
 
 //Compile Sass
-gulp.task('sass', function(){
+ gulp.task('sass', function(){
     gulp.src('sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('css/'))
-});
+        .pipe(gulp.dest('css'))
+ });
 
 //Lint Scripts
 gulp.task('lint', function(){
@@ -29,7 +29,7 @@ gulp.task('default', ['sass', 'imagemin', 'lint']);
 
 //Gulp Watch
 gulp.task('watch', function(){
-    gulp.watch('sass/*.scss', ['sass']);
-    gulp.watch('img/*', ['imagemin']);
-    gulp.watch('app/*', ['lint']);
+    gulp.watch('./sass/*.scss', ['sass']);
+    gulp.watch('./img/*', ['imagemin']);
+    gulp.watch('./app/*', ['lint']);
 });
