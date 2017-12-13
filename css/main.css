@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+body {
+  background-image: url("images/bg.jpg");
+  color: #eceff1; }
+
+nav {
+  font-family: "Anton", sans-serif;
+  color: red;
+  text-shadow: 0px 0px 16px rgba(178, 34, 34, 0.96);
+  background-color: #37474f !important; }
+
+nav:a li {
+  background-color: #37474f; }
+
+.name {
+  font-size: 42px; }
+
+h1 {
+  text-align: center;
+  font-family: "Anton", sans-serif; }
+
+.title {
+  font-family: "Anton", sans-serif;
+  color: red;
+  text-shadow: 0px 0px 16px rgba(178, 34, 34, 0.96);
+  text-align: center; }
+
+#searchField {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding-bottom: 35px; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto); }
+
+.one {
+  background-color: red;
+  grid-column: 2;
+  grid-row: 1; }
+
+.two {
+  background-color: red;
+  grid-column: 2;
+  grid-row: 2; }
+
+footer {
+  background-color: #37474f;
+  text-align: center;
+  color: red;
+  margin-top: 20%; }
