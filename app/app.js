@@ -28,6 +28,10 @@ app.config(($routeProvider) => {
             templateUrl: 'partials/auth.html',
             controller: "AuthCtrl"
         })
+        .when('/profile', {
+            templateUrl: 'partials/profile.html',
+            controller: "ProfileCtrl"
+        })
 });
 
 app.run(($location, FBCreds, MDBCreds) => {

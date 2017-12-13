@@ -1,12 +1,13 @@
   <nav ng-controller="NavCtrl" class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">WatchList</a>
+        <a class="navbar-brand">WatchList</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Main</a></li>
-        <li class="active"><a href="#!/home">Home</a></li>
-        <li class="active"><a href="#!/auth">Sign In</a></li>
+        <li class="active"><a ng-href="#">Main</a></li>
+        <li class="active"><a ng-href="#!/home">Home</a></li>
+        <li class="active"><a ng-href="#!/auth" ng-show="!isLoggedIn">Sign In</a></li>
+        <li class="active"><a ng-click="logout()" ng-href="#!/auth" ng-show="isLoggedIn">Sign Out</a></li>
       </ul>
     </div>
   </nav>
