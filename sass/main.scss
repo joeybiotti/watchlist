@@ -23,7 +23,14 @@ body{
 }
 
 nav{
-    @include headerStyle()
+    @include headerStyle();
+    background-color: $navColor !important;
+}
+
+nav:a{
+    li{
+        background-color: $navColor;
+    }
 }
 
 h1{
@@ -32,7 +39,8 @@ h1{
 }
 
 .title{
-    @include headerStyle()
+    @include headerStyle();
+    text-align: center;
 }
 
 #searchField{
@@ -64,4 +72,6 @@ h1{
 footer{
     background-color: $navColor;
     text-align: center;
+    color: red;
+    margin-top: 20%;
 }
