@@ -4,21 +4,21 @@ console.log("app.js loaded");
 
 const app = angular.module('WatchListApp', ['ngRoute']);
 
-let isAuth = (AuthFactory) =>
-    new Promise(function (resolve, reject) {
-        AuthFactory.isAuthenticated()
-            .then((userExists) => {
-                if (userExists) {
-                    console.log("user exists");
-                    resolve();
-                } else {
-                    console.log("user does not exist");
-                    reject();
-                }
-            });
-    });
+
+const isAuth = AuthFactory => new Promise ((resolve, reject) =>{
+    if(AuthFactory.isAuthenticated()){
+        console.log("user authenticated, resolve");
+        resolve();
+    } else {
+        console.log("user not autenticated, reject");
+        reject();
+    }
+})
 
 app.config(($routeProvider) => {
+    /*
+    CONFIGURE ANGULAR ROUTES HERE
+    */
     $routeProvider
         .when('/home', {
             templateUrl: 'partials/home.html',
