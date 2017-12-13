@@ -1,17 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+// Fonts
+$headerFont:'Anton', sans-serif;
+
 // Colors
 $bgColor: #263238;
 $navColor: #37474f;
 $white: #eceff1;
 $black: #212121;
 
+// Mixins
+
+@mixin headerStyle {
+    font-family: $headerFont;
+    color: red;
+    text-shadow: 0px 0px 16px rgba(178, 34, 34, 0.96);
+}
+
 body{
     background-color: $bgColor;
     color: $white;
 }
 
+nav{
+    @include headerStyle()
+}
+
 h1{
     text-align: center;
-    color: purple;
+    font-family: $headerFont;
+}
+
+.title{
+    @include headerStyle()
 }
 
 #searchField{
