@@ -5,7 +5,21 @@ console.log("dataFactory.js loaded");
 //FIREBASE INTERACTION
 
 app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
+
     let user = AuthFactory.getUser();
+
+    const getUserWatchlist = (movies) => {
+        console.log("getting data from firebase");
+        return $q((resolve, reject) =>{
+            $http.get(`${FBCreds.databaseURL}/movies.json`, JSON.stringify(movies))
+            .then((movies) => {
+                resolve(movies)
+            })
+            .catch((error) => {
+                reject(error);
+            });
+        });
+    }
 
     const addToWatchList = (movie) => {
         console.log("adding movie to firebase");
