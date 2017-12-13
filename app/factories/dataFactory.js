@@ -4,7 +4,7 @@ console.log("dataFactory.js loaded");
 
 //FIREBASE INTERACTION
 
-app.factor("DataFactory", function($q, $http, FBCreds, AuthFactory){
+app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
     let user = AuthFactory.getUser();
 
     const addToWatchList = (movie) => {
