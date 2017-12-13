@@ -24,6 +24,10 @@ app.config(($routeProvider) => {
             templateUrl: 'partials/home.html',
             controller: 'HomeCtrl'
         })
+        .when('/auth', {
+            templateUrl: 'partials/auth.html',
+            controller: "AuthCtrl"
+        })
 });
 
 app.run(($location, FBCreds, MDBCreds) => {
