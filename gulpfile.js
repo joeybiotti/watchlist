@@ -7,7 +7,7 @@ const jshint = require('gulp-jshint');
 gulp.task('imagemin', function(){
     gulp.src('img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('images'))
+        .pipe(gulp.dest('css/images'))
 });
 
 //Compile Sass
