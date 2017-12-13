@@ -5,28 +5,32 @@ console.log("app.js loaded");
 const app = angular.module('WatchListApp', ['ngRoute']);
 
 let isAuth = (AuthFactory) =>
-    new Promise(function(resolve, reject){
+    new Promise(function (resolve, reject) {
         AuthFactory.isAuthenticated()
-        .then((userExists) =>{
-            if(userExists){
-                console.log("user exists");
-                resolve();
-            }else{
-                console.log("user does not exist");
-                reject();
-            }
-        });
+            .then((userExists) => {
+                if (userExists) {
+                    console.log("user exists");
+                    resolve();
+                } else {
+                    console.log("user does not exist");
+                    reject();
+                }
+            });
     });
 
 app.config(($routeProvider) => {
     $routeProvider
-    .when('/home', {
-        templateUrl:'partials/home.html',
-        controller: 'HomeCtrl'
-    })
+        .when('/home', {
+            templateUrl: 'partials/home.html',
+            controller: 'HomeCtrl'
+        })
+        .when('/auth', {
+            templateUrl: 'partials/auth.html',
+            controller: "AuthCtrl"
+        })
 });
 
-app.run(($location, FBCreds, MDBCreds) =>{
+app.run(($location, FBCreds, MDBCreds) => {
     let MBDauthConfig = {
         apiKey: MDBCreds.apiKey,
     };

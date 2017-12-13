@@ -14,7 +14,7 @@
     <div ng-include="'partials/navbar.html'"></div>
 
     <div id="searchField">
-      <input type="text" placeholder="Search Movies.."><button type="button" class="btn btn-info">Search</button>
+      <input type="text" placeholder="Search Movies.."><button id="search" type="button" class="btn btn-info">Search</button>
     </div>
 
     <div ng-view></div>
@@ -43,11 +43,14 @@
 <!--FACTORIES-->
 <script type="text/javascript" src="app/factories/authFactory.js"></script>
 <script type="text/javascript" src="app/factories/dataFactory.js"></script>
+<script type="text/javascript" src="app/factories/searchFactory.js"></script>
+<script type="text/javascript" src="app/factories/mdbFactory.js"></script>
 
 <!--CONTROLLERS-->
 <script type="text/javascript" src="app/controllers/mainCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/navCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/homeCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/authCtrl.js"></script>
 
 <!--CREDS-->
 <script type="text/javascript" src="app/values/fb-creds.js"></script>
