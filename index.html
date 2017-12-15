@@ -10,17 +10,14 @@
 </head>
 
 <body ng-app="WatchListApp">
-
     <div ng-include="'partials/navbar.html'"></div>
-
-    <div id="searchField">
-      <input type="text" placeholder="Search Movies.."><button id="search" type="button" class="btn btn-info">Search</button>
+    <div id="bg">
+      <div id="searchField">
+        <input type="text" placeholder="Search Movies.."><button id="search" type="button" class="btn btn-info">Search</button>
+      </div>
+      <div ng-view></div>
+      <!--APP LOADS HERE-->
     </div>
-
-    <div ng-view></div>
-
-    <!--APP LOADS HERE-->
-
   <footer>WatchList, &copy;2017</footer>
 </body>
 

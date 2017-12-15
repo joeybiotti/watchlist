@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Anton");
+html {
+  height: 100%;
+  width: 100%; }
+
 body {
-  background-image: url("images/bg.jpg");
+  background-color: #263238;
   color: #eceff1; }
+
+#bg {
+  background-image: url("./images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 nav {
   font-family: "Anton", sans-serif;
@@ -50,5 +59,4 @@ h1 {
 footer {
   background-color: #37474f;
   text-align: center;
-  color: red;
-  margin-top: 20%; }
+  color: red; }
