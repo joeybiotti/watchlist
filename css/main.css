@@ -9,8 +9,10 @@ body {
 
 #bg {
   background-image: url("./images/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  width: 90%;
+  height: 95%;
+  margin: auto;
+  box-shadow: 12px, 12px, 5px, red; }
 
 nav {
   font-family: "Anton", sans-serif;
