@@ -24,15 +24,17 @@ html{
 
 body{
     background-color: $bgColor;
+    background: linear-gradient(to bottom, #020202, transparent), url('../img/bg.jpg') no-repeat center;
+    background-size: cover;
     color: $white;
 }
 
 #bg{
-    background-image: url("./images/bg.jpg");
     width: 90%;
     height: 95%;
     margin: auto;
     box-shadow: 12px, 12px, 5px, red;
+    z-index: -1;
 }
 
 nav{

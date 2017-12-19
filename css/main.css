@@ -5,14 +5,16 @@ html {
 
 body {
   background-color: #263238;
+  background: linear-gradient(to bottom, #020202, transparent), url("../img/bg.jpg") no-repeat center;
+  background-size: cover;
   color: #eceff1; }
 
 #bg {
-  background-image: url("./images/bg.jpg");
   width: 90%;
   height: 95%;
   margin: auto;
-  box-shadow: 12px, 12px, 5px, red; }
+  box-shadow: 12px, 12px, 5px, red;
+  z-index: -1; }
 
 nav {
   font-family: "Anton", sans-serif;
