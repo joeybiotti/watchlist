@@ -13,7 +13,7 @@ const isAuth = AuthFactory => new Promise ((resolve, reject) =>{
         console.log("user not autenticated, reject");
         reject();
     }
-})
+});
 
 app.config(($routeProvider) => {
     /*
@@ -31,7 +31,7 @@ app.config(($routeProvider) => {
         .when('/profile', {
             templateUrl: 'partials/profile.html',
             controller: "ProfileCtrl"
-        })
+        });
 });
 
 app.run(($location, FBCreds, MDBCreds) => {
