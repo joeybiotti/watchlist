@@ -8,6 +8,8 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
 
     let user = AuthFactory.getUser();
 
+// GETS USER'S FIREBASE MOVIES
+
     const getUserWatchlist = (movies) => {
         console.log("getting data from firebase");
         return $q((resolve, reject) =>{
@@ -20,6 +22,8 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
             });
         });
     }
+
+// ADDS MOVIE TO USER'S FIREBASE
 
     const addToWatchList = (movie) => {
         console.log("adding movie to firebase");
@@ -34,6 +38,8 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
         });
     };
 
+// EDITS MOVIE IN USER'S FIREBASE
+
     const editMovie = (movie, obj) => {
         console.log('editing movie', movie, obj);
         return $q((resolve, reject) =>{
@@ -46,6 +52,8 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
             })
         });
     };
+
+// DELETES MOVIES FROM USER'S FIREBASE
 
     const removeMovie = (movie) => {
         console.log('removing movie', movie);
@@ -61,6 +69,9 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
         });
     };
 
-    return {addToWatchList, editMovie, removeMovie};
+    return {addToWatchList,
+            editMovie,
+            removeMovie
+        };
 
 });
