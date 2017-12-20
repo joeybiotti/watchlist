@@ -25,6 +25,10 @@ nav {
 nav:a li {
   background-color: #37474f; }
 
+#navTitle {
+  font-size: 45px;
+  color: #eceff1; }
+
 .name {
   font-size: 42px; }
 
