@@ -67,9 +67,11 @@ h1{
 }
 
 #searchField{
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     margin: auto;
-    width: 50%;
     padding-bottom: 35px;
 }
 
